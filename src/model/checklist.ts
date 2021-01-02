@@ -78,7 +78,7 @@ export class CheckList {
     }
 
     update(name: string, checkItems: CheckItem[]) {
-        this.repo.update(this.Id, { Name: name, CheckItems: this.CheckItems.map(ConvertToCheckItemDto) });
+        this.repo.update(this.Id, { Name: name, CheckItems: checkItems.map(ConvertToCheckItemDto) });
     }
 
     abort() {
