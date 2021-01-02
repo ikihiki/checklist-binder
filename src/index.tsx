@@ -9,7 +9,9 @@ import { BrowserRouter } from 'react-router-dom';
 import firebase from 'firebase';
 
 const config = {
-
+  apiKey: 'AIzaSyBj-3hCCb2ihQex5Vx2w3uyo7VFFdRxwAI',
+  authDomain: 'checklistbinder.firebaseapp.com',
+  databaseURL: 'https://checklistbinder-default-rtdb.firebaseio.com/'
 };
 firebase.initializeApp(config);
 
@@ -17,9 +19,9 @@ firebase.initializeApp(config);
 ReactDOM.render(
   <Provider theme={teamsTheme}>
     <BrowserRouter>
-      <Switch>
-        <Route exact path='/' component={App} />
-        <Route path='/:id' component={App} />
+    <Switch>
+      <Route exact path='/' component={App} />
+      <Route path='/:id' component={App} />
       </Switch>
     </BrowserRouter>
   </Provider>,
