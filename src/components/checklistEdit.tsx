@@ -23,11 +23,8 @@ interface IDragData {
 
 
 const CheckItemEdit = observer(({ checkItem, index }: IPropCheckItemEdit) => {
-    const [{ isDragging }, drag] = useDrag({
-        item: { type: ItemTypes.KNIGHT, index: index } as IDragData,
-        collect: monitor => ({
-            isDragging: !!monitor.isDragging(),
-        }),
+    const [, drag] = useDrag({
+        item: { type: ItemTypes.KNIGHT, index: index } as IDragData
     })
 
     return (

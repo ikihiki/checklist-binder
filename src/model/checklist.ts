@@ -1,4 +1,3 @@
-import { time } from "console";
 import firebase from "firebase";
 import { Duration, DateTime } from "luxon";
 import { action, computed, makeAutoObservable, makeObservable, observable } from "mobx";

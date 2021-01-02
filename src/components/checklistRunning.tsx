@@ -36,7 +36,7 @@ export const CheckListRunning = observer(({ checkList }: IPropCheckListRunning) 
     const onClickNext = () => {
         checkList.next();
     }
-    const [dummy, setDummy] = useState(Date.now());
+    const [, setDummy] = useState(Date.now());
     useEffect(() => {
         const timeoutId = setTimeout(() => setDummy(Date.now()),200);
         return () => {
