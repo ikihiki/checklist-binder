@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider, teamsTheme } from '@fluentui/react-northstar';
+import { Route, Switch } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import firebase from 'firebase';
+
+const config = {
+
+};
+firebase.initializeApp(config);
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider theme={teamsTheme}>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={App} />
+        <Route path='/:id' component={App} />
+      </Switch>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
